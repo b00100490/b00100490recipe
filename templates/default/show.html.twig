@@ -1,0 +1,16 @@
+{% extends 'base.html.twig.' %}
+{% block title %}{{ recipe.title }}{% endblock %}
+{% block body %}
+    <h2>{{ recipe.title }}</h2>
+    <p>{{ recipe.author }}</p>
+    <h5>{{ recipe.summary }}</h5>
+    <p>{{ recipe.ingredients }}</p>
+    <p>{{ recipe.steps }}</p>
+    <hr>
+    <h4>Comments</h4>
+    <p>{{ recipe.comments }}</p>
+    <a href="/" class="btn btn-primary">Go Back</a>
+
+
+
+{% endblock %}
