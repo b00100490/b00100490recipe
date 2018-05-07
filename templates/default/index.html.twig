@@ -1,14 +1,36 @@
 {% extends 'base.html.twig.' %}
-
-{% block title %}Recipe Manager{% endblock %}
-
+{% block title %}List Recipes{% endblock %}
 {% block body %}
-    <h1>Hello</h1>
+    {% if recipes %}
+       <table id="recipes" class="table table-striped">
+         <thead>
+         <tr>
+             <th>Title</th>
+             <th>Summary</th>
+             <th>Author</th>
+             <th>Actions</th>
+         </tr>
+         </thead>
+         <tbody>
 
-    <p>This friendly message is coming from:</p>
-    <ul>
-        <li>Your controller at <code>src/Controller/DefaultController.php</code></li>
-        <li>Your template at <code>templates/default/index.html.twig</code></li>
-    </ul>
+         {% for recipe in recipes %}
+            <tr>
+                <td>{{ recipe.title }}</td>
+                <td>{{ recipe.summary }}</td>
+                <td>{{ recipe.author }}</td>
+                <td><a href="/default/{{ recipe.id }}" class="btn btn-success">Show</a>
+                <a href="/default/editrecipe{{ recipe.id }}" class="btn btn-secondary">Edit</a>
+                <a href="#" class="btn btn-danger delete-recipe" data-id="{{ recipe.id }}">Delete</a>
+                </td>
+            </tr>
+         {% endfor %}
+         </tbody>
+    {% else %}
+    <p>Nothing to show</p>
+    {% endif %}
 
 {% endblock %}
+
+           {% block javascripts %}
+           <script src="/js/main.js"></script>
+           {% endblock %}
