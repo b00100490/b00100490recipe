@@ -16,10 +16,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="list_Recipes")
-     * @method({
-    "GET"
-    })
+     * summary
+     * @Route("/", name="list_all_recipes")
+     * @method({"GET"})
      */
     public function index()
     {
@@ -60,7 +59,7 @@ class DefaultController extends Controller
             $entityManager->persist($recipe);
             $entityManager->flush();
 
-            return $this->redirectToRoute('list_Recipes');
+            return $this->redirectToRoute('list_all_recipes');
         }
 
             return $this->render('default/newrecipe.html.twig', array('form' => $form->createView()));
@@ -89,7 +88,7 @@ class DefaultController extends Controller
 
 
     /**
-     * @Route("/default/editrecipe{id}", name="Edit_Recipe")
+     * @Route("/default/editrecipe{id}", name="edit_recipe")
      * Method({"GET", "POST"})
      */
 
@@ -115,7 +114,7 @@ class DefaultController extends Controller
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
 
-            return $this->redirectToRoute('list_Recipes');
+            return $this->redirectToRoute('list_all_recipes');
         }
 
         return $this->render('default/editrecipe.html.twig', array('form' => $form->createView()));

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="2" assertions="1" errors="1" failures="0" skipped="0" time="30.022925">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\B00100490\Desktop\b00100490recipe\tests\Controller\DefaultControllerTest.php" tests="2" assertions="1" errors="1" failures="0" skipped="0" time="30.022925">
+      <testcase name="testHomePageStatusOK" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\B00100490\Desktop\b00100490recipe\tests\Controller\DefaultControllerTest.php" line="22" assertions="0" time="28.381340">
+        <error type="Doctrine\DBAL\DBALException">App\Tests\Controller\DefaultControllerTest::testHomePageStatusOK
+Doctrine\DBAL\DBALException: The given 'driver' postgresql is unknown, Doctrine currently supports only the following drivers: pdo_mysql, pdo_sqlite, pdo_pgsql, pdo_oci, oci8, ibm_db2, pdo_sqlsrv, mysqli, drizzle_pdo_mysql, sqlanywhere, sqlsrv
+
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\doctrine\dbal\lib\Doctrine\DBAL\DBALException.php:138
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\doctrine\dbal\lib\Doctrine\DBAL\DriverManager.php:216
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\doctrine\dbal\lib\Doctrine\DBAL\DriverManager.php:165
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\doctrine\doctrine-bundle\ConnectionFactory.php:52
+C:\Users\B00100490\Desktop\b00100490recipe\var\cache\test\ContainerP9pgFgs\getDoctrine_Dbal_DefaultConnectionService.php:32
+C:\Users\B00100490\Desktop\b00100490recipe\var\cache\test\ContainerP9pgFgs\srcTestDebugProjectContainer.php:285
+C:\Users\B00100490\Desktop\b00100490recipe\var\cache\test\ContainerP9pgFgs\getDoctrine_Orm_DefaultEntityManagerService.php:49
+C:\Users\B00100490\Desktop\b00100490recipe\var\cache\test\ContainerP9pgFgs\srcTestDebugProjectContainer.php:285
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\dependency-injection\Container.php:239
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\doctrine-bridge\ManagerRegistry.php:35
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\doctrine\common\lib\Doctrine\Common\Persistence\AbstractManagerRegistry.php:231
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\doctrine-bridge\CacheWarmer\ProxyCacheWarmer.php:49
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\http-kernel\CacheWarmer\CacheWarmerAggregate.php:48
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\http-kernel\Kernel.php:556
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\http-kernel\Kernel.php:125
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\framework-bundle\Test\KernelTestCase.php:61
+C:\Users\B00100490\Desktop\b00100490recipe\vendor\symfony\framework-bundle\Test\WebTestCase.php:33
+C:\Users\B00100490\Desktop\b00100490recipe\tests\Controller\DefaultControllerTest.php:27
+</error>
+      </testcase>
+      <testcase name="testNewRecipePageStatusOk" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\B00100490\Desktop\b00100490recipe\tests\Controller\DefaultControllerTest.php" line="41" assertions="1" time="1.641585"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,4 @@
+App\Tests\Controller\DefaultController
+ [ ] Home page status o k
+ [x] New recipe page status ok
+
